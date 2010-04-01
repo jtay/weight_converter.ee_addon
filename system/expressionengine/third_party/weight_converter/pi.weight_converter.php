@@ -44,7 +44,7 @@ class Weight_converter{
 	* @see __construct
 	* @var array
 	*/	
-	private $units = array('lb', 'g', 'kg', 'oz', 'st', 'short_ton', 'long_ton');
+	private $units = array('lb', 'g', 'kg', 'oz', 'st', 'short_tons', 'long_tons');
 
 	/**
 	* Data sent back to calling function
@@ -121,10 +121,10 @@ class Weight_converter{
     case 'st':
       $converted_num = $this->convert_st($this->to, $TMPL->tagdata);
       break;
-    case 'short_ton':
+    case 'short_tons':
       $converted_num = $this->convert_short_ton($this->to, $TMPL->tagdata);
       break;
-    case 'long_ton':
+    case 'long_tons':
       $converted_num = $this->convert_short_ton($this->to, $TMPL->tagdata);
       break;
     default:
@@ -145,7 +145,8 @@ class Weight_converter{
     switch ($to) 
     {
     case 'lb':
-      $this->converted_unit = $tagdata * 1;     
+      $this->converted_unit = $tagdata * 1;   
+      break;
     case 'g':
       $this->converted_unit = $tagdata * 453.59237;
       break;
@@ -158,11 +159,11 @@ class Weight_converter{
     case 'st':
       $this->converted_unit = $tagdata * 0.07142857;
       break;
-    case 'short-tons':
+    case 'short_tons':
       $this->converted_unit = $tagdata * 0.0005;
       break;
-    case 'long-tons':
-      $this->converted_unit = tagdata * 0.00044642857142857;
+    case 'long_tons':
+      $this->converted_unit = $tagdata * 0.00044642857142857;
     }
     return $this->converted_unit; 	
   }
@@ -177,7 +178,8 @@ class Weight_converter{
     switch ($to) 
     {
     case 'lb':
-      $this->converted_unit = $tagdata * 0.0022046226218488;     
+      $this->converted_unit = $tagdata * 0.0022046226218488;  
+      break;   
     case 'g':
       $this->converted_unit = $tagdata * 1;
       break;
@@ -190,11 +192,11 @@ class Weight_converter{
     case 'st':
       $this->converted_unit = $tagdata * 0.000157473044;
       break;
-    case 'short-tons':
+    case 'short_tons':
       $this->converted_unit = $tagdata * 0.0000011023113109244;
       break;
-    case 'long-tons':
-      $this->converted_unit = tagdata * 0.00000098420652761106;
+    case 'long_tons':
+      $this->converted_unit = $tagdata * 0.00000098420652761106;
     }
     return $this->converted_unit; 	
   }
@@ -209,7 +211,8 @@ class Weight_converter{
     switch ($to) 
     {
     case 'lb':
-      $this->converted_unit = $tagdata * 2.2046226218488;     
+      $this->converted_unit = $tagdata * 2.2046226218488; 
+      break;    
     case 'g':
       $this->converted_unit = $tagdata * 1000;
       break;
@@ -222,11 +225,11 @@ class Weight_converter{
     case 'st':
       $this->converted_unit = $tagdata * 0.157473044;
       break;
-    case 'short-tons':
+    case 'short_tons':
       $this->converted_unit = $tagdata * 0.0011023113109244;
       break;
-    case 'long-tons':
-      $this->converted_unit = tagdata * 0.00098420652761106;
+    case 'long_tons':
+      $this->converted_unit = $tagdata * 0.00098420652761106;
     }
     return $this->converted_unit; 	
   }
@@ -242,6 +245,7 @@ class Weight_converter{
     {
     case 'lb':
       $this->converted_unit = $tagdata * 0.0625;     
+      break;
     case 'g':
       $this->converted_unit = $tagdata * 28.349523125;
       break;
@@ -254,11 +258,11 @@ class Weight_converter{
     case 'st':
       $this->converted_unit = $tagdata * 0.00446428571;
       break;
-    case 'short-tons':
+    case 'short_tons':
       $this->converted_unit = $tagdata * 0.00003125;
       break;
-    case 'long-tons':
-      $this->converted_unit = tagdata * 0.000027901785714286;
+    case 'long_tons':
+      $this->converted_unit = $tagdata * 0.000027901785714286;
     }
     return $this->converted_unit; 	
   }
@@ -274,6 +278,7 @@ class Weight_converter{
     {
     case 'lb':
       $this->converted_unit = $tagdata * 0.0625;     
+      break;
     case 'g':
       $this->converted_unit = $tagdata * 28.349523125;
       break;
@@ -286,11 +291,11 @@ class Weight_converter{
     case 'st':
       $this->converted_unit = $tagdata * 1;
       break;
-    case 'short-tons':
+    case 'short_tons':
       $this->converted_unit = $tagdata * 0.00003125;
       break;
-    case 'long-tons':
-      $this->converted_unit = tagdata * 0.000027901785714286;
+    case 'long_tons':
+      $this->converted_unit = $tagdata * 0.000027901785714286;
     }
     return $this->converted_unit; 	
   }
@@ -306,6 +311,7 @@ class Weight_converter{
     {
     case 'lb':
       $this->converted_unit = $tagdata * 2000;     
+      break;
     case 'g':
       $this->converted_unit = $tagdata * 907184.74;
       break;
@@ -318,11 +324,11 @@ class Weight_converter{
     case 'st':
       $this->converted_unit = $tagdata * 142.857143;
       break;
-    case 'short-tons':
+    case 'short_tons':
       $this->converted_unit = $tagdata * 1;
       break;
-    case 'long-tons':
-      $this->converted_unit = tagdata * 0.89285714285714;
+    case 'long_tons':
+      $this->converted_unit = $tagdata * 0.89285714285714;
     }
     return $this->converted_unit; 	
   }
@@ -338,6 +344,7 @@ class Weight_converter{
     {
     case 'lb':
       $this->converted_unit = $tagdata * 2240;     
+      break;
     case 'g':
       $this->converted_unit = $tagdata * 1016046.9088;
       break;
@@ -350,11 +357,11 @@ class Weight_converter{
     case 'st':
       $this->converted_unit = $tagdata * 160;
       break;
-    case 'short-tons':
+    case 'short_tons':
       $this->converted_unit = $tagdata * 1.12;
       break;
-    case 'long-tons':
-      $this->converted_unit = tagdata * 1.12;
+    case 'long_tons':
+      $this->converted_unit = $tagdata * 1.12;
     }
     return $this->converted_unit; 	
   }
